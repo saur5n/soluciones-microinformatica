@@ -1,0 +1,30 @@
+=================================================================================
+[¿Que ocurre?]:
+
+# ⚠️ Outlook se cieera solo de forma automática a los 10seg de abrirlo
+
+
+=================================================================================
+[SOLUCIÓN]:
+
+# 1. Cierro Teams
+Me aseguro de que Teams no esta abierto (se suele quedar en segundo plano)
+
+# 2. Arranque en modo seguro 
+Windows + R
+outlook.exe /safe
+
+# 3. Desactivar complemento Teams
+Archivo > Opciones > Complementos
+Administrar: Complementos COM > Ir > [ ] Desmarca: Microsoft Teams Meeting Add-in
+
+# 4. Limpiar caché Teams (dos opciones de rutas)
+# Guardo los archivos de estas rutas en una ruta segura como backup. Como puede ser "C:\Users\<usuario>\Documents".
+%appdata%\Microsoft\Teams
+%localappdata%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache
+
+# 5. A partir de aquí ya esta completado
+# Puedo afinarlo, pero en el caso de que nunca se haya logueado es mejor no seguir con este paso...
+Abre Teams → ⚙️ Configuración
+[ ] Desactiva: “Registrar Teams como app de chat para Office” 
+
