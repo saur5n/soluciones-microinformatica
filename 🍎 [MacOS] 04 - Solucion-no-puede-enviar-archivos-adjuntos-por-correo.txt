@@ -4,7 +4,21 @@ Mensaje de error:
 		Si quita los datos adjuntos, podrá guardar el borrador del mensaje...
 	]
 
+------------------------------------------------------------------------------------------------------------------------
+[EXPLICAICÓN]:
 
+- Ocurría que todas las veces que fallaba casualmente era porque intentaba entrar antes de tiempo en "items de inicio" con usuario ./Administrador.
+- Lo he solucionado quitando de times de inicio el workshop porque por defecto intentaba entrar como Administrador...
+- También he buscado en el lavero y no encontrado ninguno realccionado.
+
+
+
+
+
+
+
+
+## -- ESTAS FORMS DE ABAJO NO SIRVEN PORQUE NO HAN FUNCIONADO
 ------------------------------------------------------------------------------------------------------------------------
 [F O R M A 1]:
 
