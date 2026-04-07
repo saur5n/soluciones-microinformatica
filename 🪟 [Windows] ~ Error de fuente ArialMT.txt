@@ -1,0 +1,44 @@
+=======================================================================================
+[🔩 Error]:
+
+# Cuando intento abrir el archivo pdf me dice el siguiente mensaje
+"
+	No se puede encontrar o crear la fuente 'ArialMT'. Algunos caracteres podrían no 
+	mostrarse o imprimirse correctaemnte
+"
+
+
+=======================================================================================
+[🔩 Solución]:
+
+# El problema no radica en las fuentes de Windows como yo pensaba al probar lo de abajo en las otras opciones
+# El problema está en como "Adobe Acrobat Reader DC" no es capaz de leer algunas fuentes
+
+> La solución está en desplazar el .pdf a un navegador para abrirlo con navegador y así si muestra las fuentes. 
+(es problema de Adobe Acrobat Reader DC con la lectura de ciertas fuentes aunque sí están instaladas en Windows)
+
+
+=======================================================================================
+[🔩 Otras cosas que he probado]:
+
+# Método 1 Fallback de fuentes del sistema (MEJOR)
+Win + R = regedit
+
+# busco por la siguiente ruta
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
+
+# Click derecho en panel derecho ? Nuevo ? Valor de cadena
+Nombre: ArialMT
+Valor: Arial
+
+# Método 2 PowerShell (más rápido · permisos administrador)
+New-ItemProperty `
+  -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" `
+  -Name "ArialMT" `
+  -Value "Arial" `
+  -PropertyType String `
+  -Force
+  
+# Verificación
+Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes"
+
