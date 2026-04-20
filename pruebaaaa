@@ -1,13 +1,18 @@
-----------------------------------------------------------------
-# cache de outlook
-~/Library/Group Containers/UBF8T346G9.Office/Outlook/Outlook 15 Profiles/Main Profile/Data
+Una mejora recomendada (AppleScript / App)
+Si quieres que el proceso sea "invisible" y no abra la Terminal, puedes envolver tu lógica en una Aplicación simple usando el Editor de Scripts:
 
-# cache de archivos adjuntos
-~/Library/Caches/TemporaryItems/Outlook Temp
+Abre Editor de Scripts (en Aplicaciones > Utilidades).
 
-----------------------------------------------------------------
+Pega esto:
+---------------------------------------------------------
+AppleScript
+delay 5 -- El tiempo de espera que necesites
+tell application "Finder"
+    try
+        mount volume "smb://10.1.20.99/AraxiVolume_FS-Kodak_K"
+    end try
+end tell
+---------------------------------------------------------
+Guárdalo como Aplicación (no como Script).
 
-# otros
-- Tipo de archivo bloqueado
-- Archivo → Opciones → Complementos → Ir → desmarcar todos temporalmente.
-- firewall
+Añade esa Aplicación a los Ítems de Inicio.
