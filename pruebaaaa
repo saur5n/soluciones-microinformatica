@@ -1,11 +1,25 @@
+=========================================================================================
+[definición]:
+
+- Una compañera con macos tiene en los items de inicio que se conecte a una unidad de red al iniciar el pc.
+- esa unidad de red es obligatoria para que el registro del programa sea el correcto.
+- a veces ocurre uqe intenta conectarse a la unidad de red con las credenciales del programa (ya he mirado el llavero y todo lo correspondiente y no veo nada raro).
+- esto ocurre desde que actualizamos desde una versión anterior de macOS.
+- como esta en items de inicio lo que ocurre es que no puedo controlar los tiempops de ejecución, por loque a veces se ejecuta antes la unidad que el programa y se lía.
+- ahora creo un script de apple (lo istalo como aplicación), y lo meto en el bucle de items, aunque se ejecute igual ahora tiene un temporizador de ejecución y además creo que si falla una vez a la siguiente funcionará correctamente (no como ahora que en cuanto falla una vez se desconfigura...).
+
+
+=========================================================================================
+[solución]:
+
 Una mejora recomendada (AppleScript / App)
 Si quieres que el proceso sea "invisible" y no abra la Terminal, puedes envolver tu lógica en una Aplicación simple usando el Editor de Scripts:
 
 Abre Editor de Scripts (en Aplicaciones > Utilidades).
 
-Pega esto:
+AppleScript:
 ---------------------------------------------------------
-AppleScript
+#!/bin/bash
 delay 5 -- El tiempo de espera que necesites
 tell application "Finder"
     try
@@ -16,3 +30,27 @@ end tell
 Guárdalo como Aplicación (no como Script).
 
 Añade esa Aplicación a los Ítems de Inicio.
+
+
+=========================================================================================
+[otra solución]:
+
+AppleScript:
+---------------------------------------------------------
+#!/bin/bash
+sleep 1
+LOG="/tmp/ARAXI.log"
+MOUNT_NAME="AraxiVolume"
+
+for i in {1..2}; do
+    if mount | grep -q "/Volumes/$MOUNT_NAME"; then
+        echo "$(date '+%Y-%m-%d %H:%M:%S') Mounted OK" >> "$LOG"
+        exit 0
+    fi
+
+    open "smb://10.1.20.99/AraxiVolume_FS-Kodak_K"
+    sleep 3
+done
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') Mount failed after retries" >> "$LOG"
+---------------------------------------------------------
