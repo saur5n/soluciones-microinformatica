@@ -1,4 +1,11 @@
 =============================================================================
+[F O R M A · -2]::
+
+# LA FORMA QUE ME A FUNCIONADO
+agrego el programa de excel a los items de inicio
+
+
+=============================================================================
 [F O R M A · -1]::
 
 # Pruebo desde la siguientes rutas (hago una copia en el escritorio y elimino dentro de dichas carpetas las caches, en el caso de que siga sin funcionar recupero del escritorio las que tenía)
