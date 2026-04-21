@@ -31,6 +31,8 @@ Guárdalo como Aplicación (no como Script).
 
 Añade esa Aplicación a los Ítems de Inicio.
 
+No hace falta meter las credenciales en el script (además de que es inseguro), porque una vez están guardadas en el llavero (recordar), de esta manera debería recordarlas...
+
 
 =========================================================================================
 [otra solución]:
