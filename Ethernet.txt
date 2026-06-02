@@ -1,0 +1,1 @@
+* Para los ethernet hembra, siempre hay qe seguir el esquema "tipo B", que aparece en el propio sistema de montage
