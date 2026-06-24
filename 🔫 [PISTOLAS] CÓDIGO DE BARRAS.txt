@@ -7,5 +7,5 @@
 
 =================================================================================================================================
 [1d y 2d]::
-1d - QR y código de barras
-2d - código de barras
+1d - QR y código de barras    # al disparar ilumina una linea roja fina
+2d - código de barras         # al disparar ilumina todo el área
