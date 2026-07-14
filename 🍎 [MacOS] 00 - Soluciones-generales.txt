@@ -157,3 +157,6 @@ Te diría que lo hagas así, para que si funciona sepamos exactamente por qué, 
 
 - Abre Photoshop > Ayuda > Actualizaciones, o la app Creative Cloud, y mira si Photoshop se actualizó automáticamente a una build nueva. Algunas versiones recientes (ej. 27.7) han introducido regresiones de rendimiento que antes no existían.
 
+- Desactiva el guardado en la nube por defecto: Ve a Photoshop > Preferencias > Gestión de archivos y en Ubicación de archivo predeterminada, selecciona En tu ordenador.
+
+- Ve a Photoshop > Preferencias > Rendimiento. En Uso de memoria, asegúrate de que Photoshop tenga asignado entre el 70% y el 80% de la RAM disponible (no le des el 100%, o dejarás a macOS sin aire para respirar).
