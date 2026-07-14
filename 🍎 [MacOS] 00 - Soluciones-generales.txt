@@ -145,6 +145,7 @@ Preferencias del Sistema → Seguridad y Privacidad → Firewall → Opciones de
 
 
 =======[ 🔴 07 - Prueba: Photoshop le funciona muy lento al guardar como... ]==============================================
+# comprobar todos estos cambios con otro macos en caso de duda...
 
 Te diría que lo hagas así, para que si funciona sepamos exactamente por qué, y si no, no hayamos mezclado varias cosas a la vez:
 - Cierra Photoshop por completo.
@@ -160,3 +161,5 @@ Te diría que lo hagas así, para que si funciona sepamos exactamente por qué, 
 - Desactiva el guardado en la nube por defecto: Ve a Photoshop > Preferencias > Gestión de archivos y en Ubicación de archivo predeterminada, selecciona En tu ordenador.
 
 - Ve a Photoshop > Preferencias > Rendimiento. En Uso de memoria, asegúrate de que Photoshop tenga asignado entre el 70% y el 80% de la RAM disponible (no le des el 100%, o dejarás a macOS sin aire para respirar).
+
+- Ve a Photoshop > Preferencias > Gestión de archivos. Activa la casilla Desactivar compresión de archivos PSD y PSB. (Tus archivos pesarán un poco más, pero guardarán muchísimo más rápido).
