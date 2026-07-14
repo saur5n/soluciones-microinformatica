@@ -163,3 +163,24 @@ Te diría que lo hagas así, para que si funciona sepamos exactamente por qué, 
 - Ve a Photoshop > Preferencias > Rendimiento. En Uso de memoria, asegúrate de que Photoshop tenga asignado entre el 70% y el 80% de la RAM disponible (no le des el 100%, o dejarás a macOS sin aire para respirar).
 
 - Ve a Photoshop > Preferencias > Gestión de archivos. Activa la casilla Desactivar compresión de archivos PSD y PSB. (Tus archivos pesarán un poco más, pero guardarán muchísimo más rápido).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
